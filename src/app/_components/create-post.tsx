@@ -1,11 +1,11 @@
 "use client";
-import { useRouter } from "next/navigation";
+//import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { api } from "~/trpc/react";
 import Image from 'next/image';
 
 export function CreatePost() {
-  const router = useRouter();
+ // const router = useRouter();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [address, setAddress] = useState("");
@@ -110,8 +110,9 @@ export function CreatePost() {
             />
           </div>
           <p className="text-sm mb-2 text-gray-600">
-            Look for the "Monthly kWh Use" section in the image above. It's usually in the form of a table with monthly consumption figures. Enter the latest month's kWh usage in the field below.
+            Look for the &quot;Monthly kWh Use&quot; section in the image above. It&apos;s usually in the form of a table with monthly consumption figures. Enter the latest month&apos;s kWh usage in the field below.
           </p>
+
           <input
             type="number" // Changed to 'number' for better input control
             id="monthlyUsage"
